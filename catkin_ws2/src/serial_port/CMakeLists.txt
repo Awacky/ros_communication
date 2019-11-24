@@ -117,6 +117,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
+  include ${catkin_INCLUDE_DIRS}
 # include
   ${catkin_INCLUDE_DIRS}
 )
@@ -212,3 +213,12 @@ add_dependencies(serial_port ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORT
 target_link_libraries(serial_port
   ${catkin_LIBRARIES}
 )
+
+
+# add_executable(serial_port2
+#   src/serial_port2.cpp
+# )
+# add_dependencies(serial_port2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# target_link_libraries(serial_port2
+#   ${catkin_LIBRARIES}
+# )

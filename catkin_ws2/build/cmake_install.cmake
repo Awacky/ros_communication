@@ -126,6 +126,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/awacky/code/ros/catkin_ws2/build/gtest/cmake_install.cmake")
+  include("/home/awacky/code/ros/catkin_ws2/build/learning_communication/cmake_install.cmake")
   include("/home/awacky/code/ros/catkin_ws2/build/serial_port/cmake_install.cmake")
 
 endif()

@@ -45,23 +45,37 @@ int main(int argc, char** argv)
     ros::Rate loop_rate(500);
     while(ros::ok())
     {
-        //获取缓冲区内的字节数
-        size_t n = sp.available();
-        if(n!=0)
-        {
-            uint8_t buffer[1024];
-            //读出数据
-            n = sp.read(buffer, n);
+        // //获取缓冲区内的字节数
+        // size_t n = sp.available();
+        // if(n!=0)
+        // {
+        //     uint8_t buffer[1024];
+        //     //读出数据
+        //     n = sp.read(buffer, n);
             
-            for(int i=0; i<n; i++)
-            {
-                //16进制的方式打印到屏幕
-                std::cout << std::hex << (buffer[i] & 0xff) << " ";
-            }
-            std::cout << std::endl;
+        //     for(int i=0; i<n; i++)
+        //     {
+        //         //16进制的方式打印到屏幕
+        //         std::cout << std::hex << (buffer[i] & 0xff) << " ";
+        //     }
+        //     std::cout << std::endl;
+        //     //把数据发送回去
+        //     sp.write(buffer, n);
+        // }
+                    uint8_t buffer[4]={'2e','72','75','6e'};
+            size_t n =4;
+            //String test=".run";
+            //读出数据
+            //n = sp1.read(buffer, n);
+            
+            // for(int i=0; i<n; i++)
+            // {
+            //     //16进制的方式打印到屏幕
+            //     std::cout << std::hex << (buffer[i] & 0xff) << " ";
+            // }
+            //std::cout << std::endl;
             //把数据发送回去
-            sp.write(buffer, n);
-        }
+            sp.write(buffer,n);
         loop_rate.sleep();
     }
     
