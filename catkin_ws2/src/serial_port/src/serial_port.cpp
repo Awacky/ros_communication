@@ -62,8 +62,10 @@ int main(int argc, char** argv)
         //     //把数据发送回去
         //     sp.write(buffer, n);
         // }
-                    uint8_t buffer[4]={'2e','72','75','6e'};
-            size_t n =4;
+        
+             uint8_t buffer[4]={'.','r','u','n'};
+            // uint8_t buffer[5]={'.','s','t','o','p'};
+            size_t n =4; 
             //String test=".run";
             //读出数据
             //n = sp1.read(buffer, n);
@@ -76,6 +78,8 @@ int main(int argc, char** argv)
             //std::cout << std::endl;
             //把数据发送回去
             sp.write(buffer,n);
+                        break;          
+
         loop_rate.sleep();
     }
     

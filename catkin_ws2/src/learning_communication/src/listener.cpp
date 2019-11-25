@@ -24,6 +24,8 @@ int main(int argc, char **argv){
 
     return 0;
 }
+
+//话题编程，这儿只是打印出来数据，还有其他功能，比如收到的数据进行处理。
 /**
  * 该例程将订阅chatter话题，消息类型String
  */

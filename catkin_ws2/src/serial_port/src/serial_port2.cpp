@@ -63,7 +63,7 @@ int main(int argc, char** argv)
         //     sp1.write(test);
         // }
             //uint8_t buffer[1024];
-            uint8_t buffer[4]={'2e','72','75','6e'};
+            uint8_t buffer[4]={'02E','072','075','06E'};
             size_t n =4;
             //String test=".run";
             //读出数据
